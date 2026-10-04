@@ -1,0 +1,21 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>OSINT — HACKSUDO</title><link rel="stylesheet" href="/static/style.css"></head><body>
+<header><div class="brand"><span class="logo"><i>H</i><b>//</b></span><span class="brandcopy"><strong>OSINT <em>— HACKSUDO</em></strong><small>PUBLIC-SOURCE INTELLIGENCE</small></span></div><nav><a href="#about">ABOUT</a><button id="settingsBtn">API SOURCES</button></nav></header>
+<main>
+<section id="searchPage" class="page"><div class="hero"><span class="eyebrow">OSINT / DISCOVER / VERIFY / CORRELATE</span><h1>OSINT <em>HACKSUDO</em></h1><p class="sub">A focused public-source intelligence workspace for discovering, organizing and reviewing evidence across the open web.</p></div>
+<form id="form"><label class="primary">SEARCH NAME / KEYWORD<input name="name" required placeholder="e.g. hacksudo"></label>
+<details><summary>+ Identity pivots</summary><div class="grid"><label>USERNAME / ALIAS<input name="username" placeholder="hacksudo"></label><label>LOCATION<input name="location"></label><label>EMAIL<input name="email" type="email"></label><label>PHONE<input name="phone"></label></div>
+<div class="socialBuilder"><div class="socialHead"><div><b>SOCIAL IDENTITIES</b><small>Add known handles to search and correlate platform-specific evidence.</small></div><button type="button" id="addSocial">+ ADD SOCIAL ACCOUNT</button></div><div id="socialRows"></div></div></details>
+<label class="auth"><input type="checkbox" name="authorized" required> Authorized public-source research only.</label><button class="go">START SEARCH</button></form></section>
+
+<section id="result" class="page hidden"><div class="resultHead"><button id="back">← NEW SEARCH</button><div><small>CASE <span id="caseid"></span></small><h2 id="subject"></h2><p id="status"></p></div><button id="diagBtn">SEARCH HEALTH</button></div>
+<div id="collectors" class="collectors hidden"></div><div id="tabs" class="tabs"></div>
+<section id="profilePane" class="profilePane hidden"></section><div id="cards" class="cards"></div><div id="pager" class="pager"></div><p id="notice" class="notice"></p></section><section id="about" class="about"><div><span class="eyebrow">ABOUT</span><h2>Built for evidence-led OSINT.</h2><p>HACKSUDO organizes public web evidence into reviewable cases with source provenance, relevance scoring and analyst-controlled exclusions.</p></div><div class="aboutLinks"><a href="https://hacksudo.com" target="_blank" rel="noopener">HACKSUDO.COM ↗</a><a href="https://www.linkedin.com/in/realvilu" target="_blank" rel="noopener">LINKEDIN / REALVILU ↗</a><a href="https://www.instagram.com/realvilu/" target="_blank" rel="noopener">INSTAGRAM / REALVILU ↗</a></div></section></main>
+<footer><span>© HACKSUDO · ALL RIGHTS RESERVED</span><span>VISHAL WAGHMARE</span></footer>
+
+<div id="scanModal" class="modal hidden"><div class="scanbox"><div class="radar"><i></i><b id="pct">0%</b></div><h2>SEARCHING PUBLIC SOURCES</h2><p id="stage">Preparing search plan…</p><div class="bar"><i id="bar"></i></div><div id="mediaStrip" class="mediaStrip">
+<div class="mediaSlot"><span>MEDIA 01</span></div><div class="mediaSlot"><span>MEDIA 02</span></div><div class="mediaSlot"><span>MEDIA 03</span></div>
+<div class="mediaSlot"><span>MEDIA 04</span></div><div class="mediaSlot"><span>MEDIA 05</span></div><div class="mediaSlot"><span>MEDIA 06</span></div>
+</div><pre id="verbose">[+] initializing collectors</pre><button id="openResults" class="hidden">OPEN RESULTS</button></div></div>
+
+<div id="modal" class="modal hidden"><div class="panel"><button id="closeModal">×</button><h2>API SOURCES</h2><p>All providers are optional. Configure any combination for broader coverage; without keys, HACKSUDO keeps its public fallback.</p><div id="providers"></div><p class="tip">Credentials are stored server-side using your OS credential store when available and are never returned to browser JavaScript.</p></div></div>
+<script src="/static/app.js"></script></body></html>
