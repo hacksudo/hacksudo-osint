@@ -22,7 +22,7 @@ A web-based, evidence-led public-source intelligence workspace for authorized re
 
 ```bash
 git clone https://github.com/hacksudo/hacksudo-osint.git
-cd YOUR_REPOSITORY
+cd hacksudo-osint
 
 docker build -t hacksudo/osint:latest .
 docker run --rm -p 8080:8080 hacksudo/osint:latest
