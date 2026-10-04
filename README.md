@@ -122,21 +122,6 @@ docker run -d \
   hacksudo/hacksudo-osint:latest
 ```
 
-## GitHub publishing
-
-Before your first push, confirm `.env` and secrets are not staged:
-
-```bash
-git status
-git init
-git add .
-git status
-git commit -m "Initial OSINT HACKSUDO release"
-git branch -M main
-git remote add origin https://github.com/hacksudo/hacksudo-osint.git
-git push -u origin main
-```
-
 Recommended repository topics:
 
 `osint` `cybersecurity` `public-source-intelligence` `python` `flask` `docker` `investigation` `search`
