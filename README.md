@@ -21,7 +21,7 @@ A web-based, evidence-led public-source intelligence workspace for authorized re
 ## Quick start with Docker
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
+git clone https://github.com/hacksudo/hacksudo-osint.git
 cd YOUR_REPOSITORY
 
 docker build -t hacksudo/osint:latest .
@@ -82,21 +82,21 @@ docker login
 Build using your Docker Hub namespace:
 
 ```bash
-docker build -t YOUR_DOCKERHUB_USERNAME/hacksudo-osint:latest .
-docker tag YOUR_DOCKERHUB_USERNAME/hacksudo-osint:latest YOUR_DOCKERHUB_USERNAME/hacksudo-osint:12.0
+docker build -t hacksudo/hacksudo-osint:latest .
+docker tag hacksudo/hacksudo-osint:latest hacksudo/hacksudo-osint:12.0
 ```
 
 Test before publishing:
 
 ```bash
-docker run --rm -p 8080:8080 YOUR_DOCKERHUB_USERNAME/hacksudo-osint:latest
+docker run --rm -p 8080:8080 hacksudo/hacksudo-osint:latest
 ```
 
 Push:
 
 ```bash
-docker push YOUR_DOCKERHUB_USERNAME/hacksudo-osint:latest
-docker push YOUR_DOCKERHUB_USERNAME/hacksudo-osint:12.0
+docker push hacksudo/hacksudo-osint:latest
+docker push hacksudo/hacksudo-osint:12.0
 ```
 
 Users can then run:
@@ -105,7 +105,7 @@ Users can then run:
 docker run -d \
   --name hacksudo-osint \
   -p 8080:8080 \
-  YOUR_DOCKERHUB_USERNAME/hacksudo-osint:latest
+  hacksudo/hacksudo-osint:latest
 ```
 
 With optional API credentials:
@@ -119,7 +119,7 @@ docker run -d \
   -e GOOGLE_CSE_CX="$GOOGLE_CSE_CX" \
   -e YOUTUBE_API_KEY="$YOUTUBE_API_KEY" \
   -e OPENAI_API_KEY="$OPENAI_API_KEY" \
-  YOUR_DOCKERHUB_USERNAME/hacksudo-osint:latest
+  hacksudo/hacksudo-osint:latest
 ```
 
 ## GitHub publishing
@@ -133,7 +133,7 @@ git add .
 git status
 git commit -m "Initial OSINT HACKSUDO release"
 git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
+git remote add origin https://github.com/hacksudo/hacksudo-osint.git
 git push -u origin main
 ```
 
